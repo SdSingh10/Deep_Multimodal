@@ -10,6 +10,7 @@
   --success-color: #28a745;
   --warning-color: #ffc107;
   --danger-color: #dc3545;
+  --neutral-color: #6c757d; /* Added: Slate gray for neutral status */
   --border-radius: 12px;
   --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
@@ -186,7 +187,7 @@ body {
   border-radius: var(--border-radius);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
   text-align: left;
-  border-left: 5px solid var(--primary-color);
+  border-left: 5px solid var(--primary-color); /* Default border, will be overridden by status */
 }
 
 .result-card.safe {
@@ -198,6 +199,9 @@ body {
 .result-card.danger {
   border-left-color: var(--danger-color);
 }
+.result-card.neutral { /* Added: Styles for neutral result card */
+  border-left-color: var(--neutral-color);
+}
 
 .result-card h3 {
   margin-top: 0;
@@ -207,6 +211,7 @@ body {
 .result-card.safe h3 { color: var(--success-color); }
 .result-card.warning h3 { color: var(--warning-color); }
 .result-card.danger h3 { color: var(--danger-color); }
+.result-card.neutral h3 { color: var(--neutral-color); } /* Added: Styles for h3 in neutral card */
 
 
 .result-card p {
